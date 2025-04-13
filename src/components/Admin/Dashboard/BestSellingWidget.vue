@@ -34,12 +34,12 @@ export default {
   <div class="card">
     <div class="font-semibold text-xl mb-4">Best Selling Products</div>
     <DataTable :value="bestSalesData" :rows="5" :paginator="true" responsiveLayout="scroll">
-      <AppColumn field="name" header="Name" :sortable="true"/>
       <AppColumn field="image" header="Image">
         <template #body="{data}">
           <img :src="data.image" alt="" style="width:60px; height: 60px">
         </template>
       </AppColumn>
+      <AppColumn field="name" header="Name" :sortable="true"/>
       <AppColumn field="service_count" header="Count" :sortable="true"/>
     </DataTable>
   </div>
