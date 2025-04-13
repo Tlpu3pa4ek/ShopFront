@@ -80,10 +80,8 @@ export default {
   },
 
   async mounted() {
-    if (this.isAuthenticated) {
-      await this.getProfile();
-      this.loading = false
-    }
+    await this.getProfile();
+    this.loading = false
   },
 
   beforeUnmount() {

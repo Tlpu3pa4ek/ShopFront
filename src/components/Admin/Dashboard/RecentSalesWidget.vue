@@ -47,7 +47,11 @@ export default {
     <div class="card">
         <div class="font-semibold text-xl mb-4">Recent Sales</div>
         <DataTable :value="salesData" :rows="5" :paginator="true" responsiveLayout="scroll">
-          <AppColumn field="image" header="Image" :sortable="true" />
+          <AppColumn field="image" header="Image">
+            <template #body="{data}">
+              <img :src="data" alt="">
+            </template>
+          </AppColumn>
           <AppColumn field="name" header="Name" :sortable="true" />
           <AppColumn field="status" header="Status" :sortable="true" />
           <AppColumn field="date" header="Date" :sortable="true" />
