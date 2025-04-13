@@ -49,7 +49,7 @@ export default {
         <DataTable :value="salesData" :rows="5" :paginator="true" responsiveLayout="scroll">
           <AppColumn field="image" header="Image">
             <template #body="{data}">
-              <img :src="data.image" alt="">
+              <img :src="data.image" alt="" style="width:60px; height: 60px">
             </template>
           </AppColumn>
           <AppColumn field="name" header="Name" :sortable="true" />

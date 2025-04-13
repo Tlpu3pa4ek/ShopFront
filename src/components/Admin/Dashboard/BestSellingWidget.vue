@@ -37,7 +37,7 @@ export default {
       <AppColumn field="name" header="Name" :sortable="true"/>
       <AppColumn field="image" header="Image">
         <template #body="{data}">
-          <img :src="data.image" alt="">
+          <img :src="data.image" alt="" style="width:60px; height: 60px">
         </template>
       </AppColumn>
       <AppColumn field="service_count" header="Count" :sortable="true"/>
